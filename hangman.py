@@ -35,7 +35,9 @@ while lives > 0:
         if letter not in wrong_letters:
             wrong_letters.append(letter)
             lives -= 1
-        print("INCORRECT")
+            print("INCORRECT")
+        else:
+            print("You already guessed that letter.")
 
     if "_" not in guessed:
         print("Congrats! You found the correct word:", secret)
