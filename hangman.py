@@ -27,13 +27,14 @@ while lives > 0:
     letter = input("Guess a letter please: ").lower()
 
     if letter in secret:
+        print("CORRECT")
         for i, ch in enumerate(secret):
             if ch == letter:
                 guessed[i] = letter
     else:
         if letter not in wrong_letters:
             wrong_letters.append(letter)
-        lives -= 1
+            lives -= 1
         print("INCORRECT")
 
     if "_" not in guessed:
